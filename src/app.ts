@@ -15,10 +15,10 @@ class App {
         this.express = express();
         this.port = port;
 
-        this.connectToTheDatabase();
-        this.initializeMiddlewares();
-        this.initializeControllers(controllers);
-        this.initializeErrorHandling();
+        this.initialiseDatabaseConnection();
+        this.initialiseMiddleware();
+        this.initialiseControllers(controllers);
+        this.initialiseErrorHandling();
     }
 
     private initialiseMiddleware(): void {
